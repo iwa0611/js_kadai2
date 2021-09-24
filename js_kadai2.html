@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>電卓</title>
+  <link rel="stylesheet" href="js_kadai2.css" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <form name="result">
+      <input type="text" id="window" name="calc">
+    <div class="box">
+      <button id="7" type="button" onclick="add7()">7</button>
+      <button id="8" type="button" onclick="add8()">8</button>
+      <button id="9" type="button" onclick="add9()">9</button>
+      <button id="+" type="button" onclick="add_plus()">+</button>
+    </div>
+    <div class="box">
+      <button id="4" type="button" onclick="add4()">4</button>
+      <button id="5" type="button" onclick="add5()">5</button>
+      <button id="6" type="button" onclick="add6()">6</button>
+      <button id="-" type="button" onclick="add_minus()">-</button>
+    </div>
+    <div class="box">
+      <button id="1" type="button" onclick="add1()">1</button>
+      <button id="2" type="button" onclick="add2()">2</button>
+      <button id="3" type="button" onclick="add3()">3</button>
+      <button id="*" type="button" onclick="add_times()">*</button>
+    </div>
+    <div class="box">
+      <button id="0" type="button" onclick="add0()">0</button>
+      <button id="00" type="button" onclick="add00()">00</button>
+      <button id="." type="button" onclick="add_dot()">.</button>
+      <button id="/" type="button" onclick="add_divide()">/</button>
+    </div>
+    <div class="box">
+      <button id="AC" type="button" onclick="add_AC()">AC</button>
+      <button id="=" type="button" onclick="add_EQ()">=</button>
+    </div>
+    </form>
+  </div>
+<script type="text/javascript" src="js_kadai2.js"></script>  
+</body>
+</html>
