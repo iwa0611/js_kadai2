@@ -1,88 +1,183 @@
-let num = "";
+
+let sum = "";
+
 
 function add1(){
-  document.result.calc.value = add(1);
+  add(1);
 }
 
 function add2(){
-  document.result.calc.value = add(2);
+  add(2);
 }
 
 function add3(){
-  document.result.calc.value = add(3);
+  add(3);
 }
 
 function add4(){
-  document.result.calc.value = add(4);
+  add(4);
 }
 
 function add5(){
-  document.result.calc.value = add(5);
+  add(5);
 }
 
 function add6(){
-  document.result.calc.value = add(6);
+  add(6);
 }
 
 function add7(){
-  document.result.calc.value = add(7);
+  add(7);
 }
 
 function add8(){
-  document.result.calc.value = add(8);
+  add(8);
 }
 
 function add9(){
-  document.result.calc.value = add(9);
+  add(9);
 }
 
 function add0(){
-  document.result.calc.value = add(0);
+  add(0);
 }
 
 function add00(){
-  document.result.calc.value = add(00) + 0;
+  document.result.calc.value = add(00) + "0";
 }
 
 
 
-//その他のキー
+//その他のキー(+)
 function add_plus(){
-  $(document).ready(function(){
-   let a = $("#window").text(sum);
-   console.log(a);
-  });
-  document.result.calc.value = add(num) + "+";
+  check_plus();
 }
 
+function check_plus(){
+  let a = document.result.calc.value.slice(-1);
+  if(a == "/"){
+   return
+ }else if(a == "-"){
+   return
+ }else if(a == "*"){
+   return
+ }else if(a == "."){
+   return
+ }else if(a != "+"){
+   document.result.calc.value = sum + "+";
+ }
+ }
+
+
+
+
+//その他のキー(-)
 function add_minus(){
-  document.result.calc.value = add(num) + "-";
+  check_minus();
 }
 
+function check_minus(){
+  let a = document.result.calc.value.slice(-1);
+  if(a == "/"){
+   return
+ }else if(a == "+"){
+   return
+ }else if(a == "*"){
+   return
+ }else if(a == "."){
+   return
+ }else if(a != "-"){
+   document.result.calc.value = sum + "-";
+ }
+}
+
+
+
+//その他のキー(*)
 function add_times(){
-  document.result.calc.value = add(num) + "*";
+  check_times();
 }
 
+function check_times(){
+  let a = document.result.calc.value.slice(-1);
+  if(a == "/"){
+   return
+ }else if(a == "+"){
+   return
+ }else if(a == "-"){
+   return
+ }else if(a == "."){
+   return
+ }else if(a != "*"){
+   document.result.calc.value = sum + "*";
+ }
+}
+
+
+
+
+//その他のキー(/)
 function add_divide(){
-  document.result.calc.value = add(num) + "/";
+  check_divide();
 }
 
+function check_divide(){
+  let a = document.result.calc.value.slice(-1);
+  if(a == "*"){
+   return
+ }else if(a == "+"){
+   return
+ }else if(a == "-"){
+   return
+ }else if(a == "."){
+   return
+ }else if(a != "/"){
+   document.result.calc.value = sum + "/";
+ }
+}
+
+
+
+//その他のキー(.)
 function add_dot(){
-  document.getElementById(".").disabled = true;
-  document.result.calc.value = add(num) + ".";
+  check_dot();
 }
 
+function check_dot(){
+  let a = document.result.calc.value.slice(-1);
+  if(a == "*"){
+   return
+ }else if(a == "+"){
+   return
+ }else if(a == "-"){
+   return
+ }else if(a == "/"){
+   return
+ }else if(a != "."){
+   document.result.calc.value = sum + ".";
+ }
+}
+
+
+
+//all clear
 function add_AC(){
   document.result.calc.value = "";
+  sum = "";
 }
 
+
+//演算
 function add_EQ(){
   result.value = new Function("return " + sum)();
+  sum = result.value;
   return document.result.calc.value = result.value;
 }
 
 
 //計算枠に数字・記号を追加
 function add(num){
-  return sum = document.result.calc.value + num;
+   sum  = document.result.calc.value + num;
+  return  document.result.calc.value = sum;
 }
+
